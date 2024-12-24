@@ -1,12 +1,18 @@
+# Water Tower Map
+
 A project to easily locate Water Towers in the UK.
 
-Version 1
----------
-[x] Get a dataset of Water Towers and overlay it on an interactive map.
+[Website](https://digitalight.github.io/wtmap/)
 
-[ ] Incorporate a database so users can add missing water towers
-[ ] Add pictures in the popup
-[ ] Track which towers a user has visited. Will need to incorporate profile management.
+## Features
+
+- [x] Get a dataset of Water Towers and overlay it on an interactive map.
+
+To Do:
+- [ ] Easier way to update the data
+- [ ] Incorporate a database so users can add missing water towers
+- [ ] Add pictures in the popup
+- [ ] Track which towers a user has visited. Will need to incorporate profile management.
 
 Uses Leaflet.js to generate the Map.
 
@@ -14,6 +20,7 @@ Version 1 dataset is OpenstreetMap using the tool
 Overpass Turbo
 
 Query used:
+
 ```
 /*
 This query looks for nodes, ways and relations 
