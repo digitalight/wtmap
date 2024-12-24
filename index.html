@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Test</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([52.28, -0.75], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+// Function to calculate the centroid of a polygon or linestring
+function calculateCentroid(coordinates) {
+            let latSum = 0, lngSum = 0, count = 0;
+
+            if (Array.isArray(coordinates[0][0])) {
+                // Handle Polygons (array of arrays of coordinates)
+                coordinates[0].forEach(coord => {
+                    lngSum += coord[0];
+                    latSum += coord[1];
+                    count++;
+                });
+            } else {
+                // Handle LineStrings (array of coordinates)
+                coordinates.forEach(coord => {
+                    lngSum += coord[0];
+                    latSum += coord[1];
+                    count++;
+                });
+            }
+
+            return [latSum / count, lngSum / count];
+        }
+
+// Load the GeoJSON data
+
+fetch('wt.geojson') // Make sure wt.geojson is in the same directory as this HTML file
+            .then(response => response.json())
+            .then(data => {
+                // Add GeoJSON layer to the map
+                L.geoJSON(data, {
+                    onEachFeature: function (feature, layer) {
+                        const geometryType = feature.geometry.type;
+                        // Add a marker for each node
+                        if (feature.geometry.type === 'Point') {
+                            const coords = feature.geometry.coordinates;
+                            const marker = L.marker([coords[1], coords[0]]).addTo(map);
+
+                            // Add a popup with the name tag, if it exists
+                            if (feature.properties && feature.properties.name) {
+                                marker.bindPopup(`<b>${feature.properties.name}</b>`);
+                            } else {
+                                marker.bindPopup(`<b>Unnamed Water Tower</b>`);
+                            }
+                        }
+                        // Handle Polygons and LineStrings (Ways)
+                        if (geometryType === 'Polygon' || geometryType === 'LineString') {
+                            const shape = L.geoJSON(feature.geometry, {
+                                style: {
+                                    color: 'blue', // Customize color
+                                    weight: 2,
+                                    opacity: 0.7
+                                }
+                            }).addTo(map);
+
+                           // Handle Polygons and LineStrings (Ways)
+                        if (geometryType === 'Polygon' || geometryType === 'LineString') {
+                            const centroid = calculateCentroid(feature.geometry.coordinates);
+                            const marker = L.marker([centroid[0], centroid[1]]).addTo(map);
+
+                            // Add a popup for ways
+                            if (feature.properties && feature.properties.name) {
+                                marker.bindPopup(`<b>${feature.properties.name}</b>`);
+                            } else {
+                                marker.bindPopup(`<b>Unnamed Water Tower</b>`);
+                            }
+                        }
+                        }
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading GeoJSON:', error));
+    </script>
+</body>
+</html>
