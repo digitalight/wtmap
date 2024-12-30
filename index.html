@@ -26,7 +26,10 @@
         }).addTo(map);
 
         // Initialize a marker cluster group
-        const markers = L.markerClusterGroup();
+        const markers = L.markerClusterGroup({
+            maxClusterRadius: 140 // Default is 80. Lower values result in tighter clusters
+        });
+        const individualMarkers = L.layerGroup();
 
         // Function to calculate the centroid of a polygon or linestring
         function calculateCentroid(coordinates) {
@@ -71,8 +74,9 @@
                             marker.bindPopup(`<b>Unnamed Water Tower</b>`);
                         }
 
-                        // Add marker to the cluster group
+                        // Add marker to both the cluster and individual layers
                         markers.addLayer(marker);
+                        individualMarkers.addLayer(marker);
                     }
 
                     // Handle Polygons and LineStrings (Ways)
@@ -87,13 +91,29 @@
                             marker.bindPopup(`<b>Unnamed Water Tower Way</b>`);
                         }
 
-                        // Add marker to the cluster group
+                        // Add marker to both the cluster and individual layers
                         markers.addLayer(marker);
+                        individualMarkers.addLayer(marker);
                     }
                 });
 
-                // Add the marker cluster group to the map
+                // Initially add the clustered markers to the map
                 map.addLayer(markers);
+
+                // Update clustering based on zoom level
+                map.on('zoomend', () => {
+                    if (map.getZoom() > 9) {
+                        if (map.hasLayer(markers)) {
+                            map.removeLayer(markers);
+                            map.addLayer(individualMarkers);
+                        }
+                    } else {
+                        if (map.hasLayer(individualMarkers)) {
+                            map.removeLayer(individualMarkers);
+                            map.addLayer(markers);
+                        }
+                    }
+                });
             })
             .catch(error => console.error('Error loading GeoJSON:', error));
     </script>
