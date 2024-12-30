@@ -37,7 +37,7 @@ function calculateCentroid(coordinates) {
 }
 
 // Load the GeoJSON data
-fetch('../data/wt.geojson') // Get Water Tower data
+fetch('/data/wt.geojson') // Get Water Tower data
     .then(response => response.json())
     .then(data => {
         // Process each feature in the GeoJSON
