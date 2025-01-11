@@ -13,11 +13,17 @@
 </head>
 <body>
     <div id="map"></div>
-
+    <div id="streetViewPopup" class="popup">
+        <button class="close-btn" onclick="closeStreetView()">×</button>
+        <div id="loadingSpinner" class="spinner"></div>
+        <iframe id="streetViewFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
     <!-- Custom JS -->
     <script src="js/map.js"></script>
+    <script src="js/streetview.js"></script>
 </body>
 </html>

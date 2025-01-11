@@ -50,11 +50,10 @@ fetch('data/wt.geojson') // Get Water Tower data
                 const marker = L.marker([coords[1], coords[0]]);
 
                 // Add a popup with the name tag, if it exists
-                if (feature.properties && feature.properties.name) {
-                    marker.bindPopup(`<b>${feature.properties.name}</b>`);
-                } else {
-                    marker.bindPopup(`<b>Unnamed Water Tower</b>`);
-                }
+                marker.bindPopup(`
+                    <b>${feature.properties?.name || 'Unnamed Water Tower'}</b><br>
+                    <button onclick="openStreetView(${coords[1]}, ${coords[0]})">Open Street View</button>
+                `);
 
                 // Add marker to both the cluster and individual layers
                 markers.addLayer(marker);
@@ -67,11 +66,10 @@ fetch('data/wt.geojson') // Get Water Tower data
                 const marker = L.marker([centroid[0], centroid[1]]);
 
                 // Add a popup for ways
-                if (feature.properties && feature.properties.name) {
-                    marker.bindPopup(`<b>${feature.properties.name}</b>`);
-                } else {
-                    marker.bindPopup(`<b>Unnamed Water Tower Way</b>`);
-                }
+                marker.bindPopup(`
+                    <b>${feature.properties?.name || 'Unnamed Water Tower'}</b><br>
+                    <button onclick="openStreetView(${centroid[0]}, ${centroid[1]})">Open Street View</button>
+                `);
 
                 // Add marker to both the cluster and individual layers
                 markers.addLayer(marker);
