@@ -1,11 +1,48 @@
-// Initialize the map and set the view to the UK
-const map = L.map('map').setView([52.24, -0.75], 12); // Latitude and Longitude for the UK
+document.addEventListener('DOMContentLoaded', function () {
+    // Default location (fallback): London, UK
+    const defaultLat = 52.24;
+    const defaultLng = -0.75;
 
-// Add OpenStreetMap tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '© OpenStreetMap contributors'
-}).addTo(map);
+    // Initialize the map
+    const map = L.map('map').setView([defaultLat, defaultLng], 12);
+
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Try to get the user's location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const userLat = position.coords.latitude;
+                const userLng = position.coords.longitude;
+
+                // Center the map on the user's location
+                map.setView([userLat, userLng], 12);
+
+            },
+            (error) => {
+                console.warn('Geolocation failed or denied. Using default location.', error);
+                // Center map on default location
+                map.setView([defaultLat, defaultLng], 12);
+            }
+        );
+    } else {
+        console.warn('Geolocation is not supported by this browser.');
+        // Center map on default location
+        map.setView([defaultLat, defaultLng], 12);
+    }
+
+// // Initialize the map and set the view to the UK
+// const map = L.map('map').setView([52.24, -0.75], 12); // Latitude and Longitude for the UK
+
+// // Add OpenStreetMap tile layer
+// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     maxZoom: 19,
+//     attribution: '© OpenStreetMap contributors'
+// }).addTo(map);
 
 // Initialize a marker cluster group
 const markers = L.markerClusterGroup({
@@ -96,3 +133,4 @@ fetch('data/wt.geojson') // Get Water Tower data
         });
     })
     .catch(error => console.error('Error loading GeoJSON:', error));
+});
