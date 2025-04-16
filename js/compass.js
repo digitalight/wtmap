@@ -98,10 +98,11 @@ function tryUpdateCompass() {
 
 // Rotate compass base
 function rotateCompass(angle) {
-  const deg = (angle + 360) % 360;
   const base = document.getElementById('compass-base');
+  const deg = (360 - angle + 360) % 360; // Invert if needed
   base.style.transform = `rotate(${deg}deg)`;
 }
+
 
 // Rotate needle to point to target
 function rotateNeedle(angle) {
