@@ -7,8 +7,11 @@ A project to easily locate Water Towers in the UK.
 ## Features
 
 - [x] Get a dataset of Water Towers and overlay it on an interactive map.
+- [x] Compass feature showing nearest tower.
+- [x] Get directions using Waze - send location to Waze.
 
 To Do:
+
 - [ ] Easier way to update the data
 - [ ] Incorporate a database so users can add missing water towers
 - [ ] Add pictures in the popup
@@ -23,7 +26,7 @@ Query used:
 
 ```
 /*
-This query looks for nodes, ways and relations 
+This query looks for nodes, ways and relations
 with the given key/value combination.
 Choose your region and hit the Run button above!
 */
