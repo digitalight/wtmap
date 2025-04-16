@@ -43,20 +43,33 @@ enableBtn.addEventListener('click', async () => {
   }
 });
 
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+
 // Enable heading tracking
 function enableCompassListener() {
-  window.addEventListener('deviceorientationabsolute' in window ? 'deviceorientationabsolute' : 'deviceorientation', (e) => {
-    let heading = e.webkitCompassHeading != null
-      ? e.webkitCompassHeading
-      : (360 - e.alpha); // fallback
+  window.addEventListener(
+    'deviceorientationabsolute' in window ? 'deviceorientationabsolute' : 'deviceorientation',
+    (e) => {
+      let heading;
 
-    if (heading != null && !isNaN(heading)) {
-      currentHeading = (heading + 180) % 360; // ✅ offset correction
-      tryUpdateCompass();
-    } else {
-      status.textContent = 'Compass data unavailable';
-    }
-  }, true);
+      if (e.webkitCompassHeading != null) {
+        // iOS
+        heading = e.webkitCompassHeading;
+      } else if (e.alpha != null) {
+        // Android (alpha is relative to magnetic north)
+        heading = 360 - e.alpha;
+      }
+
+      if (heading != null && !isNaN(heading)) {
+        currentHeading = isIOS ? heading : (heading + 180) % 360;
+        tryUpdateCompass();
+      } else {
+        status.textContent = 'Compass data unavailable';
+      }
+    },
+    true
+  );
 }
 
 // Watch GPS
