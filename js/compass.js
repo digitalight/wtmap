@@ -29,7 +29,15 @@ fetch('data/wt.geojson')
 window.addEventListener(
   'deviceorientationabsolute' in window ? 'deviceorientationabsolute' : 'deviceorientation',
   (e) => {
-    const heading = e.webkitCompassHeading ?? (e.alpha != null ? 360 - e.alpha : null);
+    let heading = null;
+
+    if (typeof e.webkitCompassHeading !== 'undefined') {
+      // iOS
+      heading = e.webkitCompassHeading;
+    } else if (e.absolute && e.alpha != null) {
+      // Android with absolute orientation
+      heading = 360 - e.alpha;
+    }
 
     if (heading != null && !isNaN(heading)) {
       currentHeading = heading;
@@ -41,6 +49,7 @@ window.addEventListener(
   },
   true
 );
+
 
 // Watch GPS position
 navigator.geolocation.watchPosition(
