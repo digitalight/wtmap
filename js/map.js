@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <b>${
                       feature.properties?.name || "Unnamed Water Tower"
                     }</b></br>
-                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                    <div class="d-grid gap-3">
                     <a href="https://www.waze.com/ul?ll=${coords[1]},${
             coords[0]
           }&navigate=yes" target="_blank">
@@ -104,8 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </a>
                     <button class="btn btn-primary btn-sm" onclick="openStreetView(${
                       coords[1]
-                    }, ${coords[0]})">Open Street View</button>
-          </div>
+                    }, ${coords[0]})">Open Street View</button></div>
                 `);
 
           // Add marker to both the cluster and individual layers
@@ -123,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <b>${
                       feature.properties?.name || "Unnamed Water Tower"
                     }</b><br>
-                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                    <div class="d-grid gap-3">
                     <a href="https://www.waze.com/ul?ll=${centroid[0]},${
             centroid[1]
           }&navigate=yes" target="_blank">
@@ -131,8 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </a>
                     <button class="btn btn-primary btn-sm" onclick="openStreetView(${
                       centroid[0]
-                    }, ${centroid[1]})">Open Street View</button>
-            </div>
+                    }, ${centroid[1]})">Open Street View</button></div>
                 `);
 
           // Add marker to both the cluster and individual layers
