@@ -1,0 +1,39 @@
+name: Update Water Tower Data
+
+on:
+  schedule:
+    # Run every Sunday at midnight UTC
+    - cron: "0 0 * * 0"
+  workflow_dispatch: # Allow manual triggering of the workflow
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      # Step 2: Fetch the latest water tower data from Overpass API
+      - name: Fetch water tower data
+        run: |
+          curl -G "https://overpass-api.de/api/interpreter" \
+            --data-urlencode 'data=[out:json][timeout:25];
+              {{geocodeArea:United Kingdom}}->.searchArea;
+              nwr["man_made"="water_tower"](area.searchArea);
+              out geom;' \
+            -o data/wt.geojson
+
+      # Step 3: Commit and push changes if the file is updated
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add data/wt.geojson
+            git commit -m "Automated weekly update of wt.geojson"
+            git push
+          else
+            echo "No changes to commit."
+          fi
