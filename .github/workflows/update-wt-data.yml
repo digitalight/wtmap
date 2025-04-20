@@ -31,15 +31,24 @@ jobs:
           mkdir -p data
 
           # Execute the query using curl
-          curl -X POST -d "$QUERY" "$OVERPASS_API_URL" -o data/wt.geojson
+          curl -X POST -d "$QUERY" "$OVERPASS_API_URL" -o data/wt_raw.json
 
-          # Validate the result
+      # Step 3: Convert Overpass JSON to GeoJSON
+      - name: Convert to GeoJSON
+        run: |
+          # Install osmtogeojson
+          npm install -g osmtogeojson
+
+          # Convert the raw Overpass JSON to GeoJSON
+          osmtogeojson data/wt_raw.json > data/wt.geojson
+
+          # Validate the GeoJSON file
           if [ ! -s data/wt.geojson ]; then
-            echo "Query failed or returned no results."
+            echo "Conversion failed or returned no results."
             exit 1
           fi
 
-      # Step 3: Commit and push changes if the file is updated
+      # Step 4: Commit and push changes if the file is updated
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
