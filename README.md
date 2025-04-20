@@ -9,10 +9,10 @@ A project to easily locate Water Towers in the UK.
 - [x] Get a dataset of Water Towers and overlay it on an interactive map.
 - [x] Compass feature showing nearest tower.
 - [x] Get directions using Waze - send location to Waze.
+- [x] Easier way to update the data. Automated with Github Actions. Every week.
 
 To Do:
 
-- [ ] Easier way to update the data
 - [ ] Incorporate a database so users can add missing water towers
 - [ ] Add pictures in the popup
 - [ ] Track which towers a user has visited. Will need to incorporate profile management.
