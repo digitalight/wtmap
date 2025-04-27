@@ -15267,6 +15267,42 @@
 },
 {
   "type": "Feature",
+  "id": "way/345605087",
+  "properties": {
+    "building": "yes",
+    "man_made": "water_tower",
+    "id": "way/345605087"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          1.0301725,
+          52.8551978
+        ],
+        [
+          1.0300506,
+          52.8550053
+        ],
+        [
+          1.0301985,
+          52.8549712
+        ],
+        [
+          1.0303204,
+          52.8551637
+        ],
+        [
+          1.0301725,
+          52.8551978
+        ]
+      ]
+    ]
+  }
+},
+{
+  "type": "Feature",
   "id": "way/346638387",
   "properties": {
     "building": "yes",
@@ -37849,6 +37885,49 @@
         [
           -0.4574473,
           51.9908146
+        ]
+      ]
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "way/1025631685",
+  "properties": {
+    "building": "ruins",
+    "historic": "yes",
+    "man_made": "water_tower",
+    "name": "Wellhouse Tower",
+    "source": "http://canmore.org.uk/site/52072",
+    "id": "way/1025631685"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -3.2012,
+          55.9496669
+        ],
+        [
+          -3.2011605,
+          55.9496785
+        ],
+        [
+          -3.2011825,
+          55.9497019
+        ],
+        [
+          -3.2012145,
+          55.9496924
+        ],
+        [
+          -3.2012219,
+          55.9496903
+        ],
+        [
+          -3.2012,
+          55.9496669
         ]
       ]
     ]
