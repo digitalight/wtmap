@@ -26240,6 +26240,7 @@
   "properties": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015411669",
     "id": "way/585713745"
   },
   "geometry": {
