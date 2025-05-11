@@ -26,8 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // Flag to track if the map has been centered
   let isMapCentered = false;
 
+  // Variable to track the last update time
+  let lastUpdateTime = 0;
+
   // Function to update the user's location
   function updateUserLocation(position) {
+    const currentTime = Date.now();
+    const throttleInterval = 5000; // 5 seconds
+
+    // Throttle updates to every 5 seconds
+    if (currentTime - lastUpdateTime < throttleInterval) {
+      return;
+    }
+    lastUpdateTime = currentTime;
+
     const userLat = position.coords.latitude;
     const userLng = position.coords.longitude;
 
@@ -48,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Try to get the user's location and update it every 15 seconds
+  // Try to get the user's location and update it
   if (navigator.geolocation) {
     navigator.geolocation.watchPosition(
       updateUserLocation,
@@ -60,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         enableHighAccuracy: true, // Enable high-precision mode
-        minimumAge: 5000, // Corrected spelling: Minimum age of cached positions
         maximumAge: 10000, // Allow cached positions up to 10 seconds old
         timeout: 10000, // Timeout for each location request
       }
