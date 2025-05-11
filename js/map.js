@@ -31,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const userLat = position.coords.latitude;
     const userLng = position.coords.longitude;
 
-    console.log("Updated user location:", userLat, userLng); // Debugging log
-
     // If the marker doesn't exist, create it
     if (!userMarker) {
       userMarker = L.marker([userLat, userLng], {
@@ -61,8 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
         );
       },
       {
-        enableHighAccuracy: true, // Use high accuracy if available
-        maximumAge: 10000, // Allow cached positions up to 15 seconds old
+        enableHighAccuracy: true, // Enable high-precision mode
+        maximumAge: 10000, // Allow cached positions up to 10 seconds old
         timeout: 10000, // Timeout for each location request
       }
     );
