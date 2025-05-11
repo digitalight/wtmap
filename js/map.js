@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       {
         enableHighAccuracy: true, // Enable high-precision mode
+        minmumAge: 5000, // Minimum age of cached positions
         maximumAge: 10000, // Allow cached positions up to 10 seconds old
         timeout: 10000, // Timeout for each location request
       }
