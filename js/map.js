@@ -13,32 +13,32 @@ document.addEventListener("DOMContentLoaded", function () {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
 
-  // Create a marker for the user's location
-  let userMarker = null;
-
   // Try to get the user's location
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
+        // Update user location variables
         const userLat = position.coords.latitude;
         const userLng = position.coords.longitude;
+
+        console.log("User location:", userLat, userLng); // Debugging log
 
         // Center the map on the user's location
         map.setView([userLat, userLng], 12);
 
-        // Add a marker for the user's location with a rabbit icon
-        if (!userMarker) {
-          userMarker = L.marker([userLat, userLng], {
-            icon: L.divIcon({
-              className: "custom-icon",
-              html: '<i class="fa-solid fa-rabbit fa-2x" style="color: #ff5722;"></i>',
-              iconSize: [30, 30], // Adjust size as needed
-              iconAnchor: [15, 15], // Anchor point of the icon
-            }),
-          }).addTo(map);
-        } else {
-          userMarker.setLatLng([userLat, userLng]);
-        }
+        // Define the custom icon
+        const rabbitIcon = L.icon({
+          iconUrl: "assets/rabbit.png", // Path to the rabbit PNG
+          iconSize: [40, 40], // Adjust size as needed
+          iconAnchor: [20, 40], // Anchor point of the icon (center bottom)
+        });
+
+        // Add a marker for the user's location with the rabbit icon
+        const userMarker = L.marker([userLat, userLng], {
+          icon: rabbitIcon,
+        }).addTo(map);
+
+        console.log("User marker added:", userLat, userLng);
       },
       (error) => {
         console.warn(
