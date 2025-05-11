@@ -13,47 +13,83 @@ document.addEventListener("DOMContentLoaded", function () {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
 
-  // Try to get the user's location
+  // Define the custom icon
+  const rabbitIcon = L.icon({
+    iconUrl: "assets/rabbit.png", // Path to the rabbit PNG
+    iconSize: [40, 40], // Adjust size as needed
+    iconAnchor: [20, 40], // Anchor point of the icon (center bottom)
+  });
+
+  // Variable to store the user's marker
+  let userMarker = null;
+
+  // Flag to track if the map has been centered
+  let isMapCentered = false;
+
+  // Function to update the user's location
+  function updateUserLocation(position) {
+    const userLat = position.coords.latitude;
+    const userLng = position.coords.longitude;
+
+    console.log("Updated user location:", userLat, userLng); // Debugging log
+
+    // If the marker doesn't exist, create it
+    if (!userMarker) {
+      userMarker = L.marker([userLat, userLng], {
+        icon: rabbitIcon,
+      }).addTo(map);
+    } else {
+      // Update the marker's position
+      userMarker.setLatLng([userLat, userLng]);
+    }
+
+    // Center the map only on the first load
+    if (!isMapCentered) {
+      map.setView([userLat, userLng], 12);
+      isMapCentered = true; // Set the flag to true after centering
+    }
+  }
+
+  // Try to get the user's location and update it every 15 seconds
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        // Update user location variables
-        const userLat = position.coords.latitude;
-        const userLng = position.coords.longitude;
-
-        console.log("User location:", userLat, userLng); // Debugging log
-
-        // Center the map on the user's location
-        map.setView([userLat, userLng], 12);
-
-        // Define the custom icon
-        const rabbitIcon = L.icon({
-          iconUrl: "assets/rabbit.png", // Path to the rabbit PNG
-          iconSize: [40, 40], // Adjust size as needed
-          iconAnchor: [20, 40], // Anchor point of the icon (center bottom)
-        });
-
-        // Add a marker for the user's location with the rabbit icon
-        const userMarker = L.marker([userLat, userLng], {
-          icon: rabbitIcon,
-        }).addTo(map);
-
-        console.log("User marker added:", userLat, userLng);
-      },
+    navigator.geolocation.watchPosition(
+      updateUserLocation,
       (error) => {
         console.warn(
           "Geolocation failed or denied. Using default location.",
           error
         );
-        // Center map on default location
-        map.setView([defaultLat, defaultLng], 12);
+      },
+      {
+        enableHighAccuracy: true, // Use high accuracy if available
+        maximumAge: 10000, // Allow cached positions up to 15 seconds old
+        timeout: 10000, // Timeout for each location request
       }
     );
   } else {
     console.warn("Geolocation is not supported by this browser.");
-    // Center map on default location
-    map.setView([defaultLat, defaultLng], 12);
   }
+
+  // Add event listener to the recenter button
+  const recenterButton = document.getElementById("recenterButton");
+  recenterButton.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    if (userMarker) {
+      // Temporarily set isMapCentered to false
+      isMapCentered = false;
+
+      // Recenter the map to the user's current location
+      const userLat = userMarker.getLatLng().lat;
+      const userLng = userMarker.getLatLng().lng;
+
+      // Center the map on the user's location
+      map.setView([userLat, userLng], 12);
+
+      // Set the flag back to true after centering
+      isMapCentered = true;
+    }
+  });
 
   // // Initialize the map and set the view to the UK
   // const map = L.map('map').setView([52.24, -0.75], 12); // Latitude and Longitude for the UK
