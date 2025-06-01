@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.5 1bd436f1",
   "osm3s": {
-    "timestamp_osm_base": "2025-05-25T00:59:35Z",
+    "timestamp_osm_base": "2025-06-01T01:06:12Z",
     "timestamp_areas_base": "2025-05-20T05:45:31Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
@@ -8006,6 +8006,7 @@
     "historic": "yes",
     "man_made": "water_tower",
     "name": "Grimston Tower",
+    "ref:GB:uprn": "10015870827",
     "source": "OS 1:25k",
     "wikidata": "Q26461432"
   }
@@ -9089,10 +9090,10 @@
   "type": "way",
   "id": 240155954,
   "bounds": {
-    "minlat": 52.9548149,
-    "minlon": -2.2399290,
-    "maxlat": 52.9548835,
-    "maxlon": -2.2398152
+    "minlat": 52.9548348,
+    "minlon": -2.2399760,
+    "maxlat": 52.9549034,
+    "maxlon": -2.2398622
   },
   "nodes": [
     2479132453,
@@ -9102,13 +9103,14 @@
     2479132453
   ],
   "geometry": [
-    { "lat": 52.9548515, "lon": -2.2399290 },
-    { "lat": 52.9548835, "lon": -2.2398749 },
-    { "lat": 52.9548468, "lon": -2.2398152 },
-    { "lat": 52.9548149, "lon": -2.2398693 },
-    { "lat": 52.9548515, "lon": -2.2399290 }
+    { "lat": 52.9548714, "lon": -2.2399760 },
+    { "lat": 52.9549034, "lon": -2.2399219 },
+    { "lat": 52.9548667, "lon": -2.2398622 },
+    { "lat": 52.9548348, "lon": -2.2399163 },
+    { "lat": 52.9548714, "lon": -2.2399760 }
   ],
   "tags": {
+    "building": "yes",
     "man_made": "water_tower"
   }
 },
@@ -31704,8 +31706,7 @@
   ],
   "tags": {
     "building": "historic",
-    "man_made": "water_tower",
-    "name": "Water Tower"
+    "man_made": "water_tower"
   }
 }
 
