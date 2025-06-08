@@ -41226,6 +41226,7 @@
     "building": "yes",
     "man_made": "water_tower",
     "name": "Water Tower & FM Transmitter",
+    "ref:GB:uprn": "10003034279;10023255101;10023255102",
     "id": "way/1183780642"
   },
   "geometry": {
