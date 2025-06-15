@@ -1,9 +1,9 @@
 {
   "version": 0.6,
-  "generator": "Overpass API 0.7.62.5 1bd436f1",
+  "generator": "Overpass API 0.7.62.7 375dc00a",
   "osm3s": {
-    "timestamp_osm_base": "2025-06-08T01:00:28Z",
-    "timestamp_areas_base": "2025-05-20T05:45:31Z",
+    "timestamp_osm_base": "2025-06-15T01:01:19Z",
+    "timestamp_areas_base": "2025-06-14T20:43:01Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -10643,7 +10643,8 @@
   ],
   "tags": {
     "building": "yes",
-    "man_made": "water_tower"
+    "man_made": "water_tower",
+    "ref:GB:uprn": "10015567591"
   }
 },
 {
@@ -10701,7 +10702,8 @@
   ],
   "tags": {
     "building": "yes",
-    "man_made": "water_tower"
+    "man_made": "water_tower",
+    "ref:GB:uprn": "10015567536"
   }
 },
 {
@@ -10759,7 +10761,8 @@
   ],
   "tags": {
     "building": "yes",
-    "man_made": "water_tower"
+    "man_made": "water_tower",
+    "ref:GB:uprn": "10015380146"
   }
 },
 {
@@ -10817,7 +10820,8 @@
   ],
   "tags": {
     "building": "yes",
-    "man_made": "water_tower"
+    "man_made": "water_tower",
+    "ref:GB:uprn": "10015793487"
   }
 },
 {

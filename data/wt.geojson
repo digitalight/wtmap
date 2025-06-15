@@ -13487,6 +13487,7 @@
   "properties": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015567591",
     "id": "way/306991224"
   },
   "geometry": {
@@ -13583,6 +13584,7 @@
   "properties": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015567536",
     "id": "way/306991225"
   },
   "geometry": {
@@ -13679,6 +13681,7 @@
   "properties": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015380146",
     "id": "way/306991228"
   },
   "geometry": {
@@ -13775,6 +13778,7 @@
   "properties": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015793487",
     "id": "way/306991229"
   },
   "geometry": {
