@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.7 375dc00a",
   "osm3s": {
-    "timestamp_osm_base": "2025-06-15T01:01:19Z",
-    "timestamp_areas_base": "2025-06-14T20:43:01Z",
+    "timestamp_osm_base": "2025-06-22T01:00:52Z",
+    "timestamp_areas_base": "2025-06-21T18:42:14Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -31711,6 +31711,49 @@
   ],
   "tags": {
     "building": "historic",
+    "man_made": "water_tower"
+  }
+},
+{
+  "type": "way",
+  "id": 1395609739,
+  "bounds": {
+    "minlat": 51.8628813,
+    "minlon": -0.5304813,
+    "maxlat": 51.8629454,
+    "maxlon": -0.5303773
+  },
+  "nodes": [
+    12918313202,
+    12918313192,
+    12918313193,
+    12918313194,
+    12918313195,
+    12918313196,
+    12918313203,
+    12918313197,
+    12918313198,
+    12918313199,
+    12918313200,
+    12918313201,
+    12918313202
+  ],
+  "geometry": [
+    { "lat": 51.8629090, "lon": -0.5303773 },
+    { "lat": 51.8628935, "lon": -0.5303878 },
+    { "lat": 51.8628834, "lon": -0.5304094 },
+    { "lat": 51.8628813, "lon": -0.5304363 },
+    { "lat": 51.8628877, "lon": -0.5304614 },
+    { "lat": 51.8629011, "lon": -0.5304778 },
+    { "lat": 51.8629177, "lon": -0.5304813 },
+    { "lat": 51.8629332, "lon": -0.5304708 },
+    { "lat": 51.8629433, "lon": -0.5304492 },
+    { "lat": 51.8629454, "lon": -0.5304223 },
+    { "lat": 51.8629390, "lon": -0.5303972 },
+    { "lat": 51.8629256, "lon": -0.5303808 },
+    { "lat": 51.8629090, "lon": -0.5303773 }
+  ],
+  "tags": {
     "man_made": "water_tower"
   }
 }
