@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.7 375dc00a",
   "osm3s": {
-    "timestamp_osm_base": "2025-06-22T01:00:52Z",
-    "timestamp_areas_base": "2025-06-21T18:42:14Z",
+    "timestamp_osm_base": "2025-06-29T01:01:57Z",
+    "timestamp_areas_base": "2025-06-25T21:32:45Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -330,16 +330,6 @@
   "lat": 51.3214010,
   "lon": -1.0448583,
   "tags": {
-    "man_made": "water_tower"
-  }
-},
-{
-  "type": "node",
-  "id": 403808946,
-  "lat": 50.7650188,
-  "lon": 0.2013104,
-  "tags": {
-    "description": "Water Tower",
     "man_made": "water_tower"
   }
 },
@@ -8539,6 +8529,63 @@
   "tags": {
     "man_made": "water_tower",
     "source:building": "OS_OpenData_StreetView"
+  }
+},
+{
+  "type": "way",
+  "id": 219880830,
+  "bounds": {
+    "minlat": 54.6673358,
+    "minlon": -5.5763416,
+    "maxlat": 54.6675108,
+    "maxlon": -5.5760391
+  },
+  "nodes": [
+    2290128358,
+    2290128365,
+    2290128361,
+    2290128363,
+    2290128371,
+    2290128370,
+    2290128362,
+    2290128360,
+    2290128364,
+    2290128366,
+    2290128356,
+    2290128359,
+    2290128355,
+    2290128369,
+    2290128357,
+    2290128367,
+    2290128368,
+    2290128358
+  ],
+  "geometry": [
+    { "lat": 54.6674574, "lon": -5.5760489 },
+    { "lat": 54.6674879, "lon": -5.5760858 },
+    { "lat": 54.6675091, "lon": -5.5761545 },
+    { "lat": 54.6675108, "lon": -5.5762073 },
+    { "lat": 54.6675042, "lon": -5.5762500 },
+    { "lat": 54.6674780, "lon": -5.5763088 },
+    { "lat": 54.6674461, "lon": -5.5763365 },
+    { "lat": 54.6674216, "lon": -5.5763416 },
+    { "lat": 54.6673843, "lon": -5.5763258 },
+    { "lat": 54.6673569, "lon": -5.5762892 },
+    { "lat": 54.6673411, "lon": -5.5762439 },
+    { "lat": 54.6673358, "lon": -5.5762050 },
+    { "lat": 54.6673380, "lon": -5.5761522 },
+    { "lat": 54.6673494, "lon": -5.5761069 },
+    { "lat": 54.6673799, "lon": -5.5760569 },
+    { "lat": 54.6674070, "lon": -5.5760398 },
+    { "lat": 54.6674376, "lon": -5.5760391 },
+    { "lat": 54.6674574, "lon": -5.5760489 }
+  ],
+  "tags": {
+    "building": "yes",
+    "man_made": "water_tower",
+    "operator": "Northern Ireland Water",
+    "operator:wikidata": "Q7058537",
+    "website": "https://www.niwater.com/"
   }
 },
 {
@@ -22570,6 +22617,7 @@
   "tags": {
     "building": "train_station",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015701898",
     "wikidata": "Q19362323",
     "wikipedia": "en:Water Tower, Cardiff Central Station"
   }

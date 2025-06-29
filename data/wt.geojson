@@ -10376,6 +10376,97 @@
 },
 {
   "type": "Feature",
+  "id": "way/219880830",
+  "properties": {
+    "building": "yes",
+    "man_made": "water_tower",
+    "operator": "Northern Ireland Water",
+    "operator:wikidata": "Q7058537",
+    "website": "https://www.niwater.com/",
+    "id": "way/219880830"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -5.5760489,
+          54.6674574
+        ],
+        [
+          -5.5760858,
+          54.6674879
+        ],
+        [
+          -5.5761545,
+          54.6675091
+        ],
+        [
+          -5.5762073,
+          54.6675108
+        ],
+        [
+          -5.57625,
+          54.6675042
+        ],
+        [
+          -5.5763088,
+          54.667478
+        ],
+        [
+          -5.5763365,
+          54.6674461
+        ],
+        [
+          -5.5763416,
+          54.6674216
+        ],
+        [
+          -5.5763258,
+          54.6673843
+        ],
+        [
+          -5.5762892,
+          54.6673569
+        ],
+        [
+          -5.5762439,
+          54.6673411
+        ],
+        [
+          -5.576205,
+          54.6673358
+        ],
+        [
+          -5.5761522,
+          54.667338
+        ],
+        [
+          -5.5761069,
+          54.6673494
+        ],
+        [
+          -5.5760569,
+          54.6673799
+        ],
+        [
+          -5.5760398,
+          54.667407
+        ],
+        [
+          -5.5760391,
+          54.6674376
+        ],
+        [
+          -5.5760489,
+          54.6674574
+        ]
+      ]
+    ]
+  }
+},
+{
+  "type": "Feature",
   "id": "way/222318627",
   "properties": {
     "man_made": "water_tower",
@@ -32347,6 +32438,7 @@
   "properties": {
     "building": "train_station",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015701898",
     "wikidata": "Q19362323",
     "wikipedia": "en:Water Tower, Cardiff Central Station",
     "id": "way/830713450"
@@ -47392,22 +47484,6 @@
     "coordinates": [
       -1.0448583,
       51.321401
-    ]
-  }
-},
-{
-  "type": "Feature",
-  "id": "node/403808946",
-  "properties": {
-    "description": "Water Tower",
-    "man_made": "water_tower",
-    "id": "node/403808946"
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      0.2013104,
-      50.7650188
     ]
   }
 },
