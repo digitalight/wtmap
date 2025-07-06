@@ -939,6 +939,7 @@
     "building": "yes",
     "man_made": "water_tower",
     "name": "Swanland Water Tower",
+    "ref:GB:uprn": "10009937611;10015701308",
     "source": "OS_Opendata_Streetview + survey",
     "id": "way/54690542"
   },
@@ -11707,6 +11708,7 @@
   "properties": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015441769",
     "source": "Bing",
     "id": "way/243935069"
   },

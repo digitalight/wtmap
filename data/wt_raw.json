@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.7 375dc00a",
   "osm3s": {
-    "timestamp_osm_base": "2025-06-29T01:01:57Z",
-    "timestamp_areas_base": "2025-06-25T21:32:45Z",
+    "timestamp_osm_base": "2025-07-06T01:00:44Z",
+    "timestamp_areas_base": "2025-07-05T20:25:30Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -2546,6 +2546,7 @@
     "building": "yes",
     "man_made": "water_tower",
     "name": "Swanland Water Tower",
+    "ref:GB:uprn": "10009937611;10015701308",
     "source": "OS_Opendata_Streetview + survey"
   }
 },
@@ -9416,6 +9417,7 @@
   "tags": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015441769",
     "source": "Bing"
   }
 },
