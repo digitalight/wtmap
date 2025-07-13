@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.7 375dc00a",
   "osm3s": {
-    "timestamp_osm_base": "2025-07-06T01:00:44Z",
-    "timestamp_areas_base": "2025-07-05T20:25:30Z",
+    "timestamp_osm_base": "2025-07-13T01:03:06Z",
+    "timestamp_areas_base": "2025-07-12T19:10:28Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -681,7 +681,9 @@
   "lat": 53.4700620,
   "lon": -1.5043678,
   "tags": {
-    "man_made": "water_tower"
+    "man_made": "water_tower",
+    "name": "Potter Hill",
+    "reservoir_type": "water_storage"
   }
 },
 {

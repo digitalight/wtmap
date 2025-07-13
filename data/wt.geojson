@@ -48046,6 +48046,8 @@
   "id": "node/1065403770",
   "properties": {
     "man_made": "water_tower",
+    "name": "Potter Hill",
+    "reservoir_type": "water_storage",
     "id": "node/1065403770"
   },
   "geometry": {
