@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.7 375dc00a",
   "osm3s": {
-    "timestamp_osm_base": "2025-07-13T01:03:06Z",
-    "timestamp_areas_base": "2025-07-12T19:10:28Z",
+    "timestamp_osm_base": "2025-07-20T01:04:45Z",
+    "timestamp_areas_base": "2025-07-19T21:24:59Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -8498,6 +8498,47 @@
 },
 {
   "type": "way",
+  "id": 211135543,
+  "bounds": {
+    "minlat": 54.1264694,
+    "minlon": -6.0008643,
+    "maxlat": 54.1266505,
+    "maxlon": -6.0006103
+  },
+  "nodes": [
+    2211382193,
+    2211382199,
+    2211382183,
+    2211382182,
+    2211382197,
+    13002203886,
+    13002203885,
+    2211382187,
+    2211382193
+  ],
+  "geometry": [
+    { "lat": 54.1266102, "lon": -6.0006274 },
+    { "lat": 54.1265772, "lon": -6.0006809 },
+    { "lat": 54.1265379, "lon": -6.0006103 },
+    { "lat": 54.1264694, "lon": -6.0007213 },
+    { "lat": 54.1265489, "lon": -6.0008643 },
+    { "lat": 54.1265926, "lon": -6.0007935 },
+    { "lat": 54.1266283, "lon": -6.0007357 },
+    { "lat": 54.1266505, "lon": -6.0006998 },
+    { "lat": 54.1266102, "lon": -6.0006274 }
+  ],
+  "tags": {
+    "building": "industrial",
+    "building:colour": "lightgrey",
+    "building:material": "stone",
+    "height": "13",
+    "man_made": "water_tower",
+    "roof:colour": "grey",
+    "roof:shape": "flat"
+  }
+},
+{
+  "type": "way",
   "id": 215353045,
   "bounds": {
     "minlat": 51.3792721,
@@ -9904,6 +9945,7 @@
     "building": "yes",
     "man_made": "water_tower",
     "name": "Swanage Water Works",
+    "ref:GB:uprn": "200004823794",
     "source": "bing"
   }
 },
@@ -18878,6 +18920,58 @@
   "tags": {
     "building": "yes",
     "building:material": "concrete",
+    "man_made": "water_tower"
+  }
+},
+{
+  "type": "way",
+  "id": 606473885,
+  "bounds": {
+    "minlat": 52.0847436,
+    "minlon": -0.9952314,
+    "maxlat": 52.0848467,
+    "maxlon": -0.9950636
+  },
+  "nodes": [
+    5750051110,
+    12998178244,
+    12998178245,
+    12998178246,
+    12998178247,
+    12998178248,
+    12998178249,
+    12998178250,
+    5750051112,
+    12998178251,
+    12998178252,
+    12998178253,
+    12998178254,
+    12998178255,
+    12998178256,
+    12998178257,
+    5750051110
+  ],
+  "geometry": [
+    { "lat": 52.0847848, "lon": -0.9952313 },
+    { "lat": 52.0848053, "lon": -0.9952314 },
+    { "lat": 52.0848242, "lon": -0.9952187 },
+    { "lat": 52.0848387, "lon": -0.9951951 },
+    { "lat": 52.0848466, "lon": -0.9951644 },
+    { "lat": 52.0848467, "lon": -0.9951310 },
+    { "lat": 52.0848388, "lon": -0.9951002 },
+    { "lat": 52.0848244, "lon": -0.9950765 },
+    { "lat": 52.0848055, "lon": -0.9950637 },
+    { "lat": 52.0847850, "lon": -0.9950636 },
+    { "lat": 52.0847660, "lon": -0.9950764 },
+    { "lat": 52.0847515, "lon": -0.9950999 },
+    { "lat": 52.0847436, "lon": -0.9951307 },
+    { "lat": 52.0847436, "lon": -0.9951640 },
+    { "lat": 52.0847514, "lon": -0.9951949 },
+    { "lat": 52.0847658, "lon": -0.9952185 },
+    { "lat": 52.0847848, "lon": -0.9952313 }
+  ],
+  "tags": {
+    "building": "yes",
     "man_made": "water_tower"
   }
 },
