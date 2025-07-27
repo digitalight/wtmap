@@ -29563,6 +29563,7 @@
   "properties": {
     "building": "tower",
     "man_made": "water_tower",
+    "operator": "Anglian Water",
     "source": "Bing",
     "id": "way/672835112"
   },
@@ -47110,6 +47111,41 @@
 },
 {
   "type": "Feature",
+  "id": "way/1416110683",
+  "properties": {
+    "man_made": "water_tower",
+    "id": "way/1416110683"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -3.165108,
+          52.9668702
+        ],
+        [
+          -3.165095,
+          52.9668487
+        ],
+        [
+          -3.1650665,
+          52.966855
+        ],
+        [
+          -3.1650795,
+          52.9668765
+        ],
+        [
+          -3.165108,
+          52.9668702
+        ]
+      ]
+    ]
+  }
+},
+{
+  "type": "Feature",
   "id": "node/25743689",
   "properties": {
     "architect": "Scherrer and Hicks",
@@ -49951,21 +49987,6 @@
     "coordinates": [
       -1.519142,
       51.2967229
-    ]
-  }
-},
-{
-  "type": "Feature",
-  "id": "node/10748166858",
-  "properties": {
-    "man_made": "water_tower",
-    "id": "node/10748166858"
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      -3.1650968,
-      52.9668595
     ]
   }
 },

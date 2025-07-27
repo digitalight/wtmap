@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.7 375dc00a",
   "osm3s": {
-    "timestamp_osm_base": "2025-07-20T01:04:45Z",
-    "timestamp_areas_base": "2025-07-19T21:24:59Z",
+    "timestamp_osm_base": "2025-07-27T01:04:28Z",
+    "timestamp_areas_base": "2025-07-26T20:43:00Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -1752,15 +1752,6 @@
   "id": 10728499209,
   "lat": 51.2967229,
   "lon": -1.5191420,
-  "tags": {
-    "man_made": "water_tower"
-  }
-},
-{
-  "type": "node",
-  "id": 10748166858,
-  "lat": 52.9668595,
-  "lon": -3.1650968,
   "tags": {
     "man_made": "water_tower"
   }
@@ -20766,6 +20757,7 @@
   "tags": {
     "building": "tower",
     "man_made": "water_tower",
+    "operator": "Anglian Water",
     "source": "Bing"
   }
 },
@@ -31898,6 +31890,33 @@
     { "lat": 51.8629390, "lon": -0.5303972 },
     { "lat": 51.8629256, "lon": -0.5303808 },
     { "lat": 51.8629090, "lon": -0.5303773 }
+  ],
+  "tags": {
+    "man_made": "water_tower"
+  }
+},
+{
+  "type": "way",
+  "id": 1416110683,
+  "bounds": {
+    "minlat": 52.9668487,
+    "minlon": -3.1651080,
+    "maxlat": 52.9668765,
+    "maxlon": -3.1650665
+  },
+  "nodes": [
+    10748166858,
+    13013756260,
+    13013756261,
+    13013756262,
+    10748166858
+  ],
+  "geometry": [
+    { "lat": 52.9668702, "lon": -3.1651080 },
+    { "lat": 52.9668765, "lon": -3.1650795 },
+    { "lat": 52.9668550, "lon": -3.1650665 },
+    { "lat": 52.9668487, "lon": -3.1650950 },
+    { "lat": 52.9668702, "lon": -3.1651080 }
   ],
   "tags": {
     "man_made": "water_tower"
