@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.7 375dc00a",
   "osm3s": {
-    "timestamp_osm_base": "2025-07-27T01:04:28Z",
-    "timestamp_areas_base": "2025-07-26T20:43:00Z",
+    "timestamp_osm_base": "2025-08-03T01:05:54Z",
+    "timestamp_areas_base": "2025-08-02T18:29:48Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -1823,16 +1823,6 @@
 },
 {
   "type": "node",
-  "id": 11919821978,
-  "lat": 52.7100926,
-  "lon": 0.7549091,
-  "tags": {
-    "man_made": "water_tower",
-    "material": "metal"
-  }
-},
-{
-  "type": "node",
   "id": 12116945276,
   "lat": 54.2552960,
   "lon": -5.6090751,
@@ -1883,6 +1873,15 @@
   "id": 12843079056,
   "lat": 51.6240438,
   "lon": -3.8713270,
+  "tags": {
+    "man_made": "water_tower"
+  }
+},
+{
+  "type": "node",
+  "id": 13037686595,
+  "lat": 54.7439684,
+  "lon": -2.0043372,
   "tags": {
     "man_made": "water_tower"
   }
@@ -11124,6 +11123,7 @@
     "addr:street": "Willow Drive",
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10010602435",
     "start_date": "1896"
   }
 },
@@ -11406,6 +11406,7 @@
   "tags": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015837024",
     "source": "Bing"
   }
 },
@@ -11465,6 +11466,7 @@
   "tags": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015837185",
     "source": "Bing"
   }
 },
@@ -11524,6 +11526,7 @@
   "tags": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015837283",
     "source": "Bing"
   }
 },
@@ -11583,6 +11586,7 @@
   "tags": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015836607",
     "source": "Bing"
   }
 },
@@ -31917,6 +31921,63 @@
     { "lat": 52.9668550, "lon": -3.1650665 },
     { "lat": 52.9668487, "lon": -3.1650950 },
     { "lat": 52.9668702, "lon": -3.1651080 }
+  ],
+  "tags": {
+    "man_made": "water_tower"
+  }
+},
+{
+  "type": "way",
+  "id": 1418361563,
+  "bounds": {
+    "minlat": 51.3715565,
+    "minlon": 0.3281619,
+    "maxlat": 51.3718212,
+    "maxlon": 0.3285843
+  },
+  "nodes": [
+    13034209594,
+    13034209595,
+    13034209596,
+    13034209597,
+    13034209598,
+    13034209599,
+    13034209600,
+    13034209601,
+    13034209583,
+    13034209584,
+    13034209588,
+    13034209589,
+    13034209590,
+    13034209591,
+    13034209592,
+    13034209593,
+    13034209585,
+    13034209586,
+    13034209587,
+    13034209594
+  ],
+  "geometry": [
+    { "lat": 51.3715565, "lon": 0.3283890 },
+    { "lat": 51.3715669, "lon": 0.3284582 },
+    { "lat": 51.3715910, "lon": 0.3285179 },
+    { "lat": 51.3716260, "lon": 0.3285616 },
+    { "lat": 51.3716681, "lon": 0.3285843 },
+    { "lat": 51.3717125, "lon": 0.3285834 },
+    { "lat": 51.3717543, "lon": 0.3285592 },
+    { "lat": 51.3717887, "lon": 0.3285142 },
+    { "lat": 51.3718119, "lon": 0.3284536 },
+    { "lat": 51.3718212, "lon": 0.3283869 },
+    { "lat": 51.3718169, "lon": 0.3283189 },
+    { "lat": 51.3717993, "lon": 0.3282567 },
+    { "lat": 51.3717702, "lon": 0.3282066 },
+    { "lat": 51.3717328, "lon": 0.3281738 },
+    { "lat": 51.3716908, "lon": 0.3281619 },
+    { "lat": 51.3716486, "lon": 0.3281718 },
+    { "lat": 51.3716105, "lon": 0.3282028 },
+    { "lat": 51.3715796, "lon": 0.3282538 },
+    { "lat": 51.3715608, "lon": 0.3283183 },
+    { "lat": 51.3715565, "lon": 0.3283890 }
   ],
   "tags": {
     "man_made": "water_tower"

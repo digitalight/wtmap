@@ -14324,6 +14324,7 @@
     "addr:street": "Willow Drive",
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10010602435",
     "start_date": "1896",
     "id": "way/322510297"
   },
@@ -14706,6 +14707,7 @@
   "properties": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015837024",
     "source": "Bing",
     "id": "way/340313199"
   },
@@ -14803,6 +14805,7 @@
   "properties": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015837185",
     "source": "Bing",
     "id": "way/340313201"
   },
@@ -14900,6 +14903,7 @@
   "properties": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015837283",
     "source": "Bing",
     "id": "way/340313203"
   },
@@ -14997,6 +15001,7 @@
   "properties": {
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015836607",
     "source": "Bing",
     "id": "way/340313204"
   },
@@ -47146,6 +47151,101 @@
 },
 {
   "type": "Feature",
+  "id": "way/1418361563",
+  "properties": {
+    "man_made": "water_tower",
+    "id": "way/1418361563"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0.328389,
+          51.3715565
+        ],
+        [
+          0.3284582,
+          51.3715669
+        ],
+        [
+          0.3285179,
+          51.371591
+        ],
+        [
+          0.3285616,
+          51.371626
+        ],
+        [
+          0.3285843,
+          51.3716681
+        ],
+        [
+          0.3285834,
+          51.3717125
+        ],
+        [
+          0.3285592,
+          51.3717543
+        ],
+        [
+          0.3285142,
+          51.3717887
+        ],
+        [
+          0.3284536,
+          51.3718119
+        ],
+        [
+          0.3283869,
+          51.3718212
+        ],
+        [
+          0.3283189,
+          51.3718169
+        ],
+        [
+          0.3282567,
+          51.3717993
+        ],
+        [
+          0.3282066,
+          51.3717702
+        ],
+        [
+          0.3281738,
+          51.3717328
+        ],
+        [
+          0.3281619,
+          51.3716908
+        ],
+        [
+          0.3281718,
+          51.3716486
+        ],
+        [
+          0.3282028,
+          51.3716105
+        ],
+        [
+          0.3282538,
+          51.3715796
+        ],
+        [
+          0.3283183,
+          51.3715608
+        ],
+        [
+          0.328389,
+          51.3715565
+        ]
+      ]
+    ]
+  }
+},
+{
+  "type": "Feature",
   "id": "node/25743689",
   "properties": {
     "architect": "Scherrer and Hicks",
@@ -50093,22 +50193,6 @@
 },
 {
   "type": "Feature",
-  "id": "node/11919821978",
-  "properties": {
-    "man_made": "water_tower",
-    "material": "metal",
-    "id": "node/11919821978"
-  },
-  "geometry": {
-    "type": "Point",
-    "coordinates": [
-      0.7549091,
-      52.7100926
-    ]
-  }
-},
-{
-  "type": "Feature",
   "id": "node/12116945276",
   "properties": {
     "man_made": "water_tower",
@@ -50196,6 +50280,21 @@
     "coordinates": [
       -3.871327,
       51.6240438
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "node/13037686595",
+  "properties": {
+    "man_made": "water_tower",
+    "id": "node/13037686595"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -2.0043372,
+      54.7439684
     ]
   }
 }
