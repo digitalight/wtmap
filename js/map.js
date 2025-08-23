@@ -133,22 +133,42 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function loadGeoJSON() {
-    const localData = localStorage.getItem("wt-geojson");
-    if (localData) {
-      addGeoJSONLayer(JSON.parse(localData));
+    const cacheKey = "wt-geojson";
+    const cacheTimeKey = "wt-geojson-timestamp";
+    const oneWeek = 7 * 24 * 60 * 60 * 1000; // 7 days in ms
+    const now = Date.now();
+
+    const cachedData = localStorage.getItem(cacheKey);
+    const cachedTime = localStorage.getItem(cacheTimeKey);
+
+    let useCache = false;
+    if (cachedData && cachedTime && now - parseInt(cachedTime, 10) < oneWeek) {
+      useCache = true;
+      addGeoJSONLayer(JSON.parse(cachedData));
     }
+
     fetch("data/wt.geojson")
       .then((res) => res.json())
       .then((data) => {
-        localStorage.setItem("wt-geojson", JSON.stringify(data));
-        addGeoJSONLayer(data);
+        localStorage.setItem(cacheKey, JSON.stringify(data));
+        localStorage.setItem(cacheTimeKey, now.toString());
+        if (!useCache) {
+          // Only add the layer if we didn't use cache
+          addGeoJSONLayer(data);
+        }
       })
       .catch((err) => {
-        if (!localData) alert("Could not load water towers data.");
+        if (!useCache) {
+          alert("Could not load water towers data.");
+        }
       });
   }
 
   function addGeoJSONLayer(data) {
+    // Clear existing markers first to prevent duplicates
+    markers.clearLayers();
+    individualMarkers.clearLayers();
+
     // Process each feature in the GeoJSON
     data.features.forEach((feature) => {
       const geometryType = feature.geometry.type;
@@ -160,19 +180,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add a popup with the name tag, if it exists
         marker.bindPopup(`
-                    <b>${
-                      feature.properties?.name || "Unnamed Water Tower"
-                    }</b></br>
-                    <div class="d-grid gap-3">
-                    <a href="https://www.waze.com/ul?ll=${coords[1]},${
+          <b>${feature.properties?.name || "Unnamed Water Tower"}</b></br>
+          <div class="d-grid gap-3">
+          <a href="https://www.waze.com/ul?ll=${coords[1]},${
           coords[0]
         }&navigate=yes" target="_blank">
-        <button class="btn btn-info btn-sm">Directions with Waze</button>
-    </a>
-                    <button class="btn btn-primary btn-sm" onclick="openStreetView(${
-                      coords[1]
-                    }, ${coords[0]})">Open Street View</button></div>
-                `);
+            <button class="btn btn-info btn-sm">Directions with Waze</button>
+          </a>
+          <button class="btn btn-primary btn-sm" onclick="openStreetView(${
+            coords[1]
+          }, ${coords[0]})">Open Street View</button>
+          </div>
+        `);
 
         // Add marker to both the cluster and individual layers
         markers.addLayer(marker);
@@ -186,19 +205,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add a popup for ways
         marker.bindPopup(`
-                    <b>${
-                      feature.properties?.name || "Unnamed Water Tower"
-                    }</b><br>
-                    <div class="d-grid gap-3">
-                    <a href="https://www.waze.com/ul?ll=${centroid[0]},${
+          <b>${feature.properties?.name || "Unnamed Water Tower"}</b><br>
+          <div class="d-grid gap-3">
+          <a href="https://www.waze.com/ul?ll=${centroid[0]},${
           centroid[1]
         }&navigate=yes" target="_blank">
-        <button class="btn btn-info btn-sm">Directions with Waze</button>
-    </a>
-                    <button class="btn btn-primary btn-sm" onclick="openStreetView(${
-                      centroid[0]
-                    }, ${centroid[1]})">Open Street View</button></div>
-                `);
+            <button class="btn btn-info btn-sm">Directions with Waze</button>
+          </a>
+          <button class="btn btn-primary btn-sm" onclick="openStreetView(${
+            centroid[0]
+          }, ${centroid[1]})">Open Street View</button>
+          </div>
+        `);
 
         // Add marker to both the cluster and individual layers
         markers.addLayer(marker);
