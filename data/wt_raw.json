@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.8 e802775f",
   "osm3s": {
-    "timestamp_osm_base": "2025-08-31T00:55:28Z",
-    "timestamp_areas_base": "2025-08-30T22:04:29Z",
+    "timestamp_osm_base": "2025-09-07T00:54:14Z",
+    "timestamp_areas_base": "2025-09-06T17:55:22Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -5637,7 +5637,8 @@
     "building": "yes",
     "height": "12",
     "man_made": "water_tower",
-    "operator": "Anglian Water"
+    "operator": "Anglian Water",
+    "ref:GB:uprn": "10015731542"
   }
 },
 {
@@ -29129,7 +29130,8 @@
   ],
   "tags": {
     "building": "water_tower",
-    "man_made": "water_tower"
+    "man_made": "water_tower",
+    "ref:GB:uprn": "10013322678;10012983724;10012983727;10012983726;10013330512"
   }
 },
 {

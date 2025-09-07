@@ -5809,6 +5809,7 @@
     "height": "12",
     "man_made": "water_tower",
     "operator": "Anglian Water",
+    "ref:GB:uprn": "10015731542",
     "id": "way/140265989"
   },
   "geometry": {
@@ -42673,6 +42674,7 @@
   "properties": {
     "building": "water_tower",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10013322678;10012983724;10012983727;10012983726;10013330512",
     "id": "way/1242846106"
   },
   "geometry": {
