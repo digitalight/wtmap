@@ -3674,6 +3674,7 @@
   "type": "Feature",
   "id": "way/114438486",
   "properties": {
+    "building": "industrial",
     "man_made": "water_tower",
     "source": "Bing;survey (from train)",
     "id": "way/114438486"
