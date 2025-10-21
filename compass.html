@@ -1,93 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Compass to Nearest Water Tower</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Water Tower Compass</title>
+    
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#2196F3">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
-  <style>
-    /* Make body take up full screen and center everything */
-/* Make body take up full screen and center everything */
-body {
-  margin: 0;
-  padding: 0;
-  background: #111;
-  color: white;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-}
+        /* Make body take up full screen and center everything */
+        html, body {
+            height: 100vh;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-/* Use flexbox to layout the page content */
-#page-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  padding: 2vh;
-  box-sizing: border-box;
-}
+        /* iOS specific fixes */
+        @supports (-webkit-touch-callout: none) {
+            body {
+                height: -webkit-fill-available;
+            }
+        }
 
-/* Make the compass responsive to screen size */
-#compass-container {
-  position: relative;
-  width: 80vmin;
-  height: 80vmin;
-  max-width: 90vw;
-  max-height: 90vw;
-}
+        /* Standalone mode adjustments */
+        @media all and (display-mode: standalone) {
+            body {
+                padding-top: env(safe-area-inset-top);
+                padding-bottom: env(safe-area-inset-bottom);
+            }
+        }
 
-/* Images inside the compass */
-#compass-base, #compass-needle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  pointer-events: none;
-}
+        /* Use flexbox to layout the page content */
+        #page-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
 
-/* Rotate needle independently */
-#compass-needle {
-  transition: transform 0.4s ease;
-  z-index: 2;
-}
+        /* Make the compass responsive to screen size */
+        #compass-container {
+            position: relative;
+            width: min(300px, 80vw);
+            height: min(300px, 80vw);
+            margin-bottom: 30px;
+        }
 
-/* Info area below compass */
-#info {
-  margin-top: 2vh;
-  font-size: 1.2rem;
-  text-align: center;
-}
+        /* Images inside the compass */
+        #compass-base, #compass-needle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
 
-/* Smaller text under info */
-#status {
-  font-size: 0.9rem;
-  margin-top: 1vh;
-  color: #ccc;
-}
+        #compass-base {
+            background: radial-gradient(circle, #333 0%, #111 100%);
+            border: 3px solid #555;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
 
-  </style>
+        /* Rotate needle independently */
+        #compass-needle {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,10 55,45 50,50 45,45" fill="red"/><polygon points="50,50 55,55 50,90 45,55" fill="white"/></svg>') center no-repeat;
+            background-size: 60%;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center;
+            z-index: 1;
+        }
+
+        /* Center dot */
+        #compass-container::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 2;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+
+        /* Info area below compass */
+        #info {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Status styling */
+        #status {
+            font-size: 14px;
+            margin-top: 10px;
+            min-height: 20px;
+        }
+
+        .status-info { color: #ccc; }
+        .status-loading { color: #ffa500; }
+        .status-error { color: #ff4444; }
+        .status-success { color: #44ff44; }
+
+        /* Loading spinner */
+        .status-loading::after {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 2px solid currentColor;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+            margin-left: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Button styling */
+        #enable-compass, .calibrate-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+
+        #enable-compass:hover, .calibrate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        #enable-compass:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .calibrate-btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            font-size: 14px;
+            padding: 10px 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-height: 600px) {
+            #compass-container {
+                width: min(200px, 60vw);
+                height: min(200px, 60vw);
+                margin-bottom: 20px;
+            }
+            
+            #info {
+                font-size: 16px;
+                padding: 15px;
+                min-height: 80px;
+            }
+        }
+
+        /* Landscape mode */
+        @media (orientation: landscape) and (max-height: 500px) {
+            #page-wrapper {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            
+            #compass-container {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div id="page-wrapper">
-    <p>Your nearest water tower is:</p>
-    <button id="enable-compass">Enable Compass</button>
-
-    <div id="compass-container">
-      <img id="compass-base" src="assets/compass-rose.png" />
-      <img id="compass-needle" src="assets/needle.png" />
+    <div id="page-wrapper">
+        <div id="compass-container">
+            <div id="compass-base"></div>
+            <div id="compass-needle"></div>
+        </div>
+        
+        <div id="info">
+            <div>Point your device towards the nearest water tower</div>
+        </div>
+        
+        <div id="status" class="status-info">Tap "Enable Compass" to start</div>
+        
+        <button id="enable-compass">Enable Compass</button>
     </div>
-    <div id="info">Finding nearest tower...</div>
-  <div id="status">Waiting for GPS...</div>
-  </div>
-  <script src="js/compass.js"></script>
+
+    <script src="js/compass.js"></script>
 </body>
 </html>
