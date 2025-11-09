@@ -47510,6 +47510,42 @@
 },
 {
   "type": "Feature",
+  "id": "way/1447132825",
+  "properties": {
+    "building": "yes",
+    "man_made": "water_tower",
+    "id": "way/1447132825"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0.6826518,
+          50.9653948
+        ],
+        [
+          0.6826384,
+          50.9653335
+        ],
+        [
+          0.6827356,
+          50.9653251
+        ],
+        [
+          0.682749,
+          50.9653863
+        ],
+        [
+          0.6826518,
+          50.9653948
+        ]
+      ]
+    ]
+  }
+},
+{
+  "type": "Feature",
   "id": "node/25743689",
   "properties": {
     "architect": "Scherrer and Hicks",

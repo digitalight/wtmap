@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.8 e802775f",
   "osm3s": {
-    "timestamp_osm_base": "2025-11-02T00:56:38Z",
-    "timestamp_areas_base": "2025-11-01T19:41:59Z",
+    "timestamp_osm_base": "2025-11-09T00:56:57Z",
+    "timestamp_areas_base": "2025-11-08T18:29:54Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -32154,6 +32154,34 @@
   ],
   "tags": {
     "disused": "yes",
+    "man_made": "water_tower"
+  }
+},
+{
+  "type": "way",
+  "id": 1447132825,
+  "bounds": {
+    "minlat": 50.9653251,
+    "minlon": 0.6826384,
+    "maxlat": 50.9653948,
+    "maxlon": 0.6827490
+  },
+  "nodes": [
+    13277633374,
+    13277633375,
+    13277633376,
+    13277633377,
+    13277633374
+  ],
+  "geometry": [
+    { "lat": 50.9653948, "lon": 0.6826518 },
+    { "lat": 50.9653335, "lon": 0.6826384 },
+    { "lat": 50.9653251, "lon": 0.6827356 },
+    { "lat": 50.9653863, "lon": 0.6827490 },
+    { "lat": 50.9653948, "lon": 0.6826518 }
+  ],
+  "tags": {
+    "building": "yes",
     "man_made": "water_tower"
   }
 }
