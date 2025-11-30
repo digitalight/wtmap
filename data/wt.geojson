@@ -1898,8 +1898,11 @@
   "type": "Feature",
   "id": "way/84301800",
   "properties": {
+    "addr:city": "Glasgow",
+    "addr:postcode": "G15 8EA",
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "906700390811",
     "source": "OS_OpenData_StreetView",
     "id": "way/84301800"
   },
@@ -5198,6 +5201,7 @@
   "type": "Feature",
   "id": "way/130352233",
   "properties": {
+    "addr:postcode": "YO26 4RR",
     "building": "yes",
     "man_made": "water_tower",
     "name": "Severus Hill Water Tower",
@@ -19084,9 +19088,12 @@
   "type": "Feature",
   "id": "way/388152915",
   "properties": {
+    "addr:postcode": "RM4 1QH",
     "building": "water_tower",
     "man_made": "water_tower",
     "name": "Havering-Atte-Bower Water Tower",
+    "ref:GB:uprn": "10015768105",
+    "source:addr:postcode": "ONSUD;OS Open UPRN",
     "id": "way/388152915"
   },
   "geometry": {

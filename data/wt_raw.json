@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.8 e802775f",
   "osm3s": {
-    "timestamp_osm_base": "2025-11-23T01:01:06Z",
-    "timestamp_areas_base": "2025-11-22T22:32:58Z",
+    "timestamp_osm_base": "2025-11-30T01:00:55Z",
+    "timestamp_areas_base": "2025-11-29T22:30:24Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -3122,8 +3122,11 @@
     { "lat": 55.9166069, "lon": -4.3835532 }
   ],
   "tags": {
+    "addr:city": "Glasgow",
+    "addr:postcode": "G15 8EA",
     "building": "yes",
     "man_made": "water_tower",
+    "ref:GB:uprn": "906700390811",
     "source": "OS_OpenData_StreetView"
   }
 },
@@ -5244,6 +5247,7 @@
     { "lat": 53.9596787, "lon": -1.1174829 }
   ],
   "tags": {
+    "addr:postcode": "YO26 4RR",
     "building": "yes",
     "man_made": "water_tower",
     "name": "Severus Hill Water Tower",
@@ -14058,9 +14062,12 @@
     { "lat": 51.6166208, "lon": 0.1900046 }
   ],
   "tags": {
+    "addr:postcode": "RM4 1QH",
     "building": "water_tower",
     "man_made": "water_tower",
-    "name": "Havering-Atte-Bower Water Tower"
+    "name": "Havering-Atte-Bower Water Tower",
+    "ref:GB:uprn": "10015768105",
+    "source:addr:postcode": "ONSUD;OS Open UPRN"
   }
 },
 {
