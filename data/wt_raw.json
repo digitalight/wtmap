@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.8 e802775f",
   "osm3s": {
-    "timestamp_osm_base": "2025-12-21T01:02:13Z",
-    "timestamp_areas_base": "2025-12-20T18:51:21Z",
+    "timestamp_osm_base": "2026-01-04T01:05:12Z",
+    "timestamp_areas_base": "2026-01-03T19:11:45Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -4252,8 +4252,11 @@
     { "lat": 53.6035818, "lon": -0.9594603 }
   ],
   "tags": {
+    "addr:city": "Doncaster",
+    "addr:postcode": "DN8 5QR",
     "building": "industrial",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015684045",
     "source": "Bing;survey (from train)"
   }
 },
@@ -24129,10 +24132,10 @@
   "type": "way",
   "id": 903871522,
   "bounds": {
-    "minlat": 51.8863924,
-    "minlon": -0.4024133,
-    "maxlat": 51.8864999,
-    "maxlon": -0.4022391
+    "minlat": 51.8863826,
+    "minlon": -0.4023751,
+    "maxlat": 51.8864933,
+    "maxlon": -0.4021882
   },
   "nodes": [
     8394591649,
@@ -24146,20 +24149,22 @@
     8394591649
   ],
   "geometry": [
-    { "lat": 51.8864999, "lon": -0.4023162 },
-    { "lat": 51.8864753, "lon": -0.4022551 },
-    { "lat": 51.8864359, "lon": -0.4022391 },
-    { "lat": 51.8863989, "lon": -0.4022750 },
-    { "lat": 51.8863924, "lon": -0.4023415 },
-    { "lat": 51.8864137, "lon": -0.4023960 },
-    { "lat": 51.8864531, "lon": -0.4024133 },
-    { "lat": 51.8864884, "lon": -0.4023814 },
-    { "lat": 51.8864999, "lon": -0.4023162 }
+    { "lat": 51.8864933, "lon": -0.4022568 },
+    { "lat": 51.8864681, "lon": -0.4022020 },
+    { "lat": 51.8864267, "lon": -0.4021882 },
+    { "lat": 51.8863891, "lon": -0.4022230 },
+    { "lat": 51.8863826, "lon": -0.4022990 },
+    { "lat": 51.8864039, "lon": -0.4023620 },
+    { "lat": 51.8864551, "lon": -0.4023751 },
+    { "lat": 51.8864845, "lon": -0.4023358 },
+    { "lat": 51.8864933, "lon": -0.4022568 }
   ],
   "tags": {
     "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Hart_Lane_Water_Tower.jpg",
     "man_made": "water_tower",
+    "name": "Hart Lane Water Tower",
     "note": "Grade II Listed Building: https://historicengland.org.uk/listing/the-list/list-entry/1146452",
+    "operator": "Hart Lane Water Tower",
     "roof:shape": "cone",
     "tower:construction": "brick"
   }

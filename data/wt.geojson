@@ -3677,8 +3677,11 @@
   "type": "Feature",
   "id": "way/114438486",
   "properties": {
+    "addr:city": "Doncaster",
+    "addr:postcode": "DN8 5QR",
     "building": "industrial",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015684045",
     "source": "Bing;survey (from train)",
     "id": "way/114438486"
   },
@@ -34936,7 +34939,9 @@
   "properties": {
     "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Hart_Lane_Water_Tower.jpg",
     "man_made": "water_tower",
+    "name": "Hart Lane Water Tower",
     "note": "Grade II Listed Building: https://historicengland.org.uk/listing/the-list/list-entry/1146452",
+    "operator": "Hart Lane Water Tower",
     "roof:shape": "cone",
     "tower:construction": "brick",
     "id": "way/903871522"
@@ -34946,40 +34951,40 @@
     "coordinates": [
       [
         [
-          -0.4023162,
-          51.8864999
+          -0.4022568,
+          51.8864933
         ],
         [
-          -0.4023814,
-          51.8864884
+          -0.4023358,
+          51.8864845
         ],
         [
-          -0.4024133,
-          51.8864531
+          -0.4023751,
+          51.8864551
         ],
         [
-          -0.402396,
-          51.8864137
+          -0.402362,
+          51.8864039
         ],
         [
-          -0.4023415,
-          51.8863924
+          -0.402299,
+          51.8863826
         ],
         [
-          -0.402275,
-          51.8863989
+          -0.402223,
+          51.8863891
         ],
         [
-          -0.4022391,
-          51.8864359
+          -0.4021882,
+          51.8864267
         ],
         [
-          -0.4022551,
-          51.8864753
+          -0.402202,
+          51.8864681
         ],
         [
-          -0.4023162,
-          51.8864999
+          -0.4022568,
+          51.8864933
         ]
       ]
     ]
