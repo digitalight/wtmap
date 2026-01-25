@@ -936,7 +936,10 @@
   "type": "Feature",
   "id": "way/54690542",
   "properties": {
+    "addr:city": "North Ferriby",
+    "addr:country": "GB",
     "addr:postcode": "HU14 3PJ",
+    "addr:suburb": "Swanland",
     "building": "yes",
     "man_made": "water_tower",
     "name": "Swanland Water Tower",
@@ -9073,6 +9076,7 @@
   "properties": {
     "addr:city": "Spalding",
     "addr:postcode": "PE11 1DA",
+    "addr:street": "Winfrey Avenue",
     "building": "yes",
     "man_made": "water_tower",
     "name": "Chatterton Tower",
@@ -13549,6 +13553,9 @@
   "type": "Feature",
   "id": "way/306991224",
   "properties": {
+    "addr:city": "Southampton",
+    "addr:postcode": "SO15 8QT",
+    "addr:street": "Waterhouse Lane",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "10015567591",
@@ -13646,6 +13653,9 @@
   "type": "Feature",
   "id": "way/306991225",
   "properties": {
+    "addr:city": "Southampton",
+    "addr:postcode": "SO15 8QT",
+    "addr:street": "Waterhouse Lane",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "10015567536",
@@ -13743,6 +13753,9 @@
   "type": "Feature",
   "id": "way/306991228",
   "properties": {
+    "addr:city": "Southampton",
+    "addr:postcode": "SO15 8PG",
+    "addr:street": "Regents Park Road",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "10015380146",
@@ -13840,6 +13853,9 @@
   "type": "Feature",
   "id": "way/306991229",
   "properties": {
+    "addr:city": "Southampton",
+    "addr:postcode": "SO15 8PG",
+    "addr:street": "Regents Park Road",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "10015793487",
@@ -20179,6 +20195,7 @@
     "heritage:operator": "Historic England",
     "listed_status": "Grade II",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015730038",
     "website": "https://www.aroundwellington.co.uk/landmark-towers-sold-for-home/",
     "id": "way/399421794"
   },
@@ -20277,6 +20294,7 @@
     "heritage:operator": "Historic England",
     "listed_status": "Grade II",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015723995",
     "website": "https://www.aroundwellington.co.uk/landmark-towers-sold-for-home/",
     "id": "way/399421858"
   },

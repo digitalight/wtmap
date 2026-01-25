@@ -1,9 +1,9 @@
 {
   "version": 0.6,
-  "generator": "Overpass API 0.7.62.8 e802775f",
+  "generator": "Overpass API 0.7.62.10 2d4cfc48",
   "osm3s": {
-    "timestamp_osm_base": "2026-01-18T01:04:31Z",
-    "timestamp_areas_base": "2026-01-17T19:46:15Z",
+    "timestamp_osm_base": "2026-01-25T01:05:45Z",
+    "timestamp_areas_base": "2026-01-22T23:45:51Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -2504,7 +2504,10 @@
     { "lat": 53.7366226, "lon": -0.5049612 }
   ],
   "tags": {
+    "addr:city": "North Ferriby",
+    "addr:country": "GB",
     "addr:postcode": "HU14 3PJ",
+    "addr:suburb": "Swanland",
     "building": "yes",
     "man_made": "water_tower",
     "name": "Swanland Water Tower",
@@ -7695,6 +7698,7 @@
   "tags": {
     "addr:city": "Spalding",
     "addr:postcode": "PE11 1DA",
+    "addr:street": "Winfrey Avenue",
     "building": "yes",
     "man_made": "water_tower",
     "name": "Chatterton Tower",
@@ -10661,6 +10665,9 @@
     { "lat": 50.9157350, "lon": -1.4369253 }
   ],
   "tags": {
+    "addr:city": "Southampton",
+    "addr:postcode": "SO15 8QT",
+    "addr:street": "Waterhouse Lane",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "10015567591"
@@ -10720,6 +10727,9 @@
     { "lat": 50.9155936, "lon": -1.4369749 }
   ],
   "tags": {
+    "addr:city": "Southampton",
+    "addr:postcode": "SO15 8QT",
+    "addr:street": "Waterhouse Lane",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "10015567536"
@@ -10779,6 +10789,9 @@
     { "lat": 50.9158108, "lon": -1.4415207 }
   ],
   "tags": {
+    "addr:city": "Southampton",
+    "addr:postcode": "SO15 8PG",
+    "addr:street": "Regents Park Road",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "10015380146"
@@ -10838,6 +10851,9 @@
     { "lat": 50.9157488, "lon": -1.4414192 }
   ],
   "tags": {
+    "addr:city": "Southampton",
+    "addr:postcode": "SO15 8PG",
+    "addr:street": "Regents Park Road",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "10015793487"
@@ -14739,6 +14755,7 @@
     "heritage:operator": "Historic England",
     "listed_status": "Grade II",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015730038",
     "website": "https://www.aroundwellington.co.uk/landmark-towers-sold-for-home/"
   }
 },
@@ -14819,6 +14836,7 @@
     "heritage:operator": "Historic England",
     "listed_status": "Grade II",
     "man_made": "water_tower",
+    "ref:GB:uprn": "10015723995",
     "website": "https://www.aroundwellington.co.uk/landmark-towers-sold-for-home/"
   }
 },
