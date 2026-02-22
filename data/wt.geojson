@@ -10077,6 +10077,9 @@
   "type": "Feature",
   "id": "way/207243685",
   "properties": {
+    "addr:city": "Cleethorpes",
+    "addr:postcode": "DN35 7JT",
+    "addr:street": "Pelham Road",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "11078597;11079486;11083498;10096107222",
@@ -47937,6 +47940,47 @@
         [
           -6.7723375,
           54.3500441
+        ]
+      ]
+    ]
+  }
+},
+{
+  "type": "Feature",
+  "id": "way/1479889657",
+  "properties": {
+    "disused": "yes",
+    "height": "35",
+    "man_made": "water_tower",
+    "operator": "Welsh Water",
+    "tower:construction": "freestanding",
+    "tower:type": "water_tower",
+    "wikidata": "Q26491308",
+    "id": "way/1479889657"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -2.7363342,
+          52.0517376
+        ],
+        [
+          -2.7361732,
+          52.0517629
+        ],
+        [
+          -2.7362031,
+          52.0518348
+        ],
+        [
+          -2.7363641,
+          52.0518095
+        ],
+        [
+          -2.7363342,
+          52.0517376
         ]
       ]
     ]

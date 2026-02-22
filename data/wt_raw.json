@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.10 2d4cfc48",
   "osm3s": {
-    "timestamp_osm_base": "2026-02-15T01:16:45Z",
+    "timestamp_osm_base": "2026-02-22T01:13:30Z",
     "timestamp_areas_base": "2026-01-23T01:22:35Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
@@ -8365,6 +8365,9 @@
     { "lat": 53.5657015, "lon": -0.0363610 }
   ],
   "tags": {
+    "addr:city": "Cleethorpes",
+    "addr:postcode": "DN35 7JT",
+    "addr:street": "Pelham Road",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "11078597;11079486;11083498;10096107222"
@@ -32446,6 +32449,39 @@
   "tags": {
     "man_made": "water_tower",
     "material": "concrete"
+  }
+},
+{
+  "type": "way",
+  "id": 1479889657,
+  "bounds": {
+    "minlat": 52.0517376,
+    "minlon": -2.7363641,
+    "maxlat": 52.0518348,
+    "maxlon": -2.7361732
+  },
+  "nodes": [
+    13574398891,
+    13574398892,
+    13574398893,
+    13574398894,
+    13574398891
+  ],
+  "geometry": [
+    { "lat": 52.0517376, "lon": -2.7363342 },
+    { "lat": 52.0518095, "lon": -2.7363641 },
+    { "lat": 52.0518348, "lon": -2.7362031 },
+    { "lat": 52.0517629, "lon": -2.7361732 },
+    { "lat": 52.0517376, "lon": -2.7363342 }
+  ],
+  "tags": {
+    "disused": "yes",
+    "height": "35",
+    "man_made": "water_tower",
+    "operator": "Welsh Water",
+    "tower:construction": "freestanding",
+    "tower:type": "water_tower",
+    "wikidata": "Q26491308"
   }
 }
 
