@@ -2,8 +2,8 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.10 2d4cfc48",
   "osm3s": {
-    "timestamp_osm_base": "2026-02-22T01:13:30Z",
-    "timestamp_areas_base": "2026-01-23T01:22:35Z",
+    "timestamp_osm_base": "2026-03-01T01:19:22Z",
+    "timestamp_areas_base": "2026-01-22T23:45:51Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
   "elements": [
@@ -27989,10 +27989,10 @@
   "type": "way",
   "id": 1155286341,
   "bounds": {
-    "minlat": 52.0358697,
-    "minlon": -0.3593336,
-    "maxlat": 52.0359827,
-    "maxlon": -0.3591719
+    "minlat": 52.0358682,
+    "minlon": -0.3592222,
+    "maxlat": 52.0359812,
+    "maxlon": -0.3590605
   },
   "nodes": [
     10743784433,
@@ -28002,11 +28002,11 @@
     10743784433
   ],
   "geometry": [
-    { "lat": 52.0359753, "lon": -0.3593336 },
-    { "lat": 52.0358697, "lon": -0.3593195 },
-    { "lat": 52.0358772, "lon": -0.3591719 },
-    { "lat": 52.0359827, "lon": -0.3591859 },
-    { "lat": 52.0359753, "lon": -0.3593336 }
+    { "lat": 52.0359738, "lon": -0.3592222 },
+    { "lat": 52.0358682, "lon": -0.3592081 },
+    { "lat": 52.0358757, "lon": -0.3590605 },
+    { "lat": 52.0359812, "lon": -0.3590745 },
+    { "lat": 52.0359738, "lon": -0.3592222 }
   ],
   "tags": {
     "man_made": "water_tower"
@@ -32482,6 +32482,33 @@
     "tower:construction": "freestanding",
     "tower:type": "water_tower",
     "wikidata": "Q26491308"
+  }
+},
+{
+  "type": "way",
+  "id": 1482201975,
+  "bounds": {
+    "minlat": 52.7991759,
+    "minlon": -0.1251318,
+    "maxlat": 52.7991914,
+    "maxlon": -0.1251038
+  },
+  "nodes": [
+    13592707745,
+    13592707746,
+    13592707747,
+    13592707748,
+    13592707745
+  ],
+  "geometry": [
+    { "lat": 52.7991901, "lon": -0.1251318 },
+    { "lat": 52.7991759, "lon": -0.1251299 },
+    { "lat": 52.7991772, "lon": -0.1251038 },
+    { "lat": 52.7991914, "lon": -0.1251057 },
+    { "lat": 52.7991901, "lon": -0.1251318 }
+  ],
+  "tags": {
+    "man_made": "water_tower"
   }
 }
 
