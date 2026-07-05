@@ -2,7 +2,7 @@
   "version": 0.6,
   "generator": "Overpass API 0.7.62.11 87bfad18",
   "osm3s": {
-    "timestamp_osm_base": "2026-06-28T02:31:24Z",
+    "timestamp_osm_base": "2026-07-05T02:03:28Z",
     "timestamp_areas_base": "2026-05-12T07:36:16Z",
     "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
   },
@@ -1888,6 +1888,15 @@
     "man_made": "water_tower",
     "operator": "East Herts Miniature Railway",
     "railway": "water_tower"
+  }
+},
+{
+  "type": "node",
+  "id": 13978733632,
+  "lat": 53.9654540,
+  "lon": -1.3121293,
+  "tags": {
+    "man_made": "water_tower"
   }
 },
 {
@@ -8807,7 +8816,8 @@
   "tags": {
     "building": "yes",
     "image": "https://www.geograph.org.uk/photo/6850276",
-    "man_made": "water_tower"
+    "man_made": "water_tower",
+    "ref:GB:uprn": "10015765241"
   }
 },
 {
@@ -21563,10 +21573,10 @@
   "type": "way",
   "id": 725154870,
   "bounds": {
-    "minlat": 51.5799159,
-    "minlon": -0.0927062,
-    "maxlat": 51.5800406,
-    "maxlon": -0.0925683
+    "minlat": 51.5799130,
+    "minlon": -0.0927856,
+    "maxlat": 51.5800389,
+    "maxlon": -0.0926281
   },
   "nodes": [
     6800060089,
@@ -21576,14 +21586,14 @@
     6800060089
   ],
   "geometry": [
-    { "lat": 51.5800342, "lon": -0.0927062 },
-    { "lat": 51.5800406, "lon": -0.0925843 },
-    { "lat": 51.5799223, "lon": -0.0925683 },
-    { "lat": 51.5799159, "lon": -0.0926901 },
-    { "lat": 51.5800342, "lon": -0.0927062 }
+    { "lat": 51.5800290, "lon": -0.0927856 },
+    { "lat": 51.5800389, "lon": -0.0926450 },
+    { "lat": 51.5799223, "lon": -0.0926281 },
+    { "lat": 51.5799130, "lon": -0.0927602 },
+    { "lat": 51.5800290, "lon": -0.0927856 }
   ],
   "tags": {
-    "disused": "yes",
+    "description": "This is now part of the new housing estate, I think an appartment.",
     "man_made": "water_tower"
   }
 },
@@ -32876,6 +32886,50 @@
   ],
   "tags": {
     "man_made": "water_tower"
+  }
+},
+{
+  "type": "way",
+  "id": 1533320831,
+  "bounds": {
+    "minlat": 51.8794790,
+    "minlon": 0.5522657,
+    "maxlat": 51.8795706,
+    "maxlon": 0.5524142
+  },
+  "nodes": [
+    13972947886,
+    13972947887,
+    13972947888,
+    13972947896,
+    13972947897,
+    13972947889,
+    13972947890,
+    13972947891,
+    13972947892,
+    13972947895,
+    13972947893,
+    13972947894,
+    13972947886
+  ],
+  "geometry": [
+    { "lat": 51.8794902, "lon": 0.5522885 },
+    { "lat": 51.8794790, "lon": 0.5523233 },
+    { "lat": 51.8794800, "lon": 0.5523626 },
+    { "lat": 51.8794929, "lon": 0.5523958 },
+    { "lat": 51.8795143, "lon": 0.5524142 },
+    { "lat": 51.8795386, "lon": 0.5524127 },
+    { "lat": 51.8795593, "lon": 0.5523917 },
+    { "lat": 51.8795706, "lon": 0.5523568 },
+    { "lat": 51.8795697, "lon": 0.5523172 },
+    { "lat": 51.8795565, "lon": 0.5522839 },
+    { "lat": 51.8795349, "lon": 0.5522657 },
+    { "lat": 51.8795107, "lon": 0.5522674 },
+    { "lat": 51.8794902, "lon": 0.5522885 }
+  ],
+  "tags": {
+    "man_made": "water_tower",
+    "operator": "The Old Water Tower"
   }
 }
 
