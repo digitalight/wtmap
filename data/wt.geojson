@@ -14267,10 +14267,12 @@
   "id": "way/322510297",
   "properties": {
     "addr:housenumber": "61",
+    "addr:postcode": "ST13 7FG",
     "addr:street": "Willow Drive",
     "building": "yes",
     "man_made": "water_tower",
     "ref:GB:uprn": "10010602435",
+    "source:addr:postcode": "ONSUD;OS Open UPRN",
     "start_date": "1896",
     "id": "way/322510297"
   },
